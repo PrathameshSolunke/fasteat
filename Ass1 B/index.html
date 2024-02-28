@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="justify-content: center;">Registration Form</h1>
+        <form id="registrationForm" onsubmit="validateForm2(event)">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" pattern="\d{5}" required>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" pattern="[A-Za-z ]+" required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"  required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" max="2004-01-01" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <label for="state">State:</label>
+            <select id="state" name="state" onchange="updateCityOptions()" required>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="andhra_pradesh">Andhra Pradesh</option>
+                <option value="west_bengal">West Bengal</option>
+                <option value="tamil_nadu">Tamil Nadu</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="telangana">Telangana</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="gujarat">Gujarat</option>
+            </select>
+
+            <label for="city">Select City:</label>
+            <select id="city" name="city">
+                <option value="Pune">Pune</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+            
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode" pattern="\d{6}" required>
+
+            
+
+            <label for="hobbies">Hobbies:</label>
+            <div id="hobbies" class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="hobby" value="reading"> Reading
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="gardening"> Gardening
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="traveling"> Traveling
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="cycling"> Cycling
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="bike_riding"> Bike Riding
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="sleeping"> Sleeping
+                </label>
+                <!-- Add more hobbies as needed -->
+            </div>
+            
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

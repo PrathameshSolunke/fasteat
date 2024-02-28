@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(129, 85, 55);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <label for="id">ID</label>
+            <input type="text" class="id" id="id" pattern="[0-9]+" title="Please enter only numeric values" required>
+            
+            <label for="name">Name</label>
+            <input type="text" class="name" id="name" pattern="[A-Za-z]+" title="Please enter only character values" required>
+
+            <label for="username">UserName</label>
+            <input type="text" id="username" class="username" >
+
+            <label for="password">Password</label>
+            <input type="password" id="password" class="password" minlength="8" maxlength="15" required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" class="email">
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" class="dob" min="1999-12-31" max="2004-12-31" required>
+
+            <label for="gender">Gender</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Can't specify</label>
+
+            <label for="address">Address</label>
+            <textarea name="address" id="" cols="30" rows="5" autocapitalize="on"></textarea>
+
+            <label for="city">Select City:</label>
+            <select id="city" name="city">
+                <option value="Pune">Pune</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+
+            <label for="pincode">Enter Pincode:</label>
+            <input type="text" id="pincode" name="pincode" pattern="[0-9]*" maxlength="6" required>
+
+            <label for="state">Select State:</label>
+            <select id="state" name="state">
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Haryana">Haryana</option>
+            </select>
+
+            <!-- <label for="hobbies">Hobbies:</label>
+            <input type="checkbox" id="hobby1" name="hobby1" value="Reading">
+            <label for="hobby1">Reading</label>
+            <input type="checkbox" id="hobby2" name="hobby2" value="Gardening">
+            <label for="hobby2">Gardening</label>
+            <input type="checkbox" id="hobby3" name="hobby3" value="Painting">
+            <label for="hobby3">Painting</label> -->
+
+            <!-- <input type="submit"> -->
+            <button>Submit</button>    
+            
+        </fieldset>
+    </form>
+</body>
+</html>

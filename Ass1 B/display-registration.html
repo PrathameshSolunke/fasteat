@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Registration Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration Data</h1>
+        <div id="registrationDataContainer"></div>
+        <p><a href="index.html">Go back to registration form</a></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        // Function to display registration data
+        function displayRegistrationData() {
+            const registrationDataContainer = document.getElementById('registrationDataContainer');
+
+            // Fetch registration data from localStorage
+            const storedData = localStorage.getItem('registrationData');
+
+            // Check if registration data is available
+            if (!storedData) {
+                registrationDataContainer.innerHTML = '<p>No registration data available.</p>';
+                return;
+            }
+
+            // Parse the stored data
+            const data = JSON.parse(storedData);
+
+            // Create an HTML list to display registration data
+            const list = document.createElement('ul');
+
+            // Iterate over data and create list items
+            Object.entries(data).forEach(([key, value]) => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${key}:</strong> ${value}<br>`;
+                list.appendChild(listItem);
+            });
+
+            // Append the list to the container
+            registrationDataContainer.appendChild(list);
+        }
+
+        // Call the displayRegistrationData function when the page loads
+        $(document).ready(function() {
+            displayRegistrationData();
+        });
+    </script>
+</body>
+
+</html>

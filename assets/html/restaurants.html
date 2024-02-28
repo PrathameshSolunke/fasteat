@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastEat Restaurants Landing Page</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+    /* Custom CSS with light orange color theme */
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff; /* White */
+      color: #333; /* Dark Gray */
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      background-color:white;
+    }
+    .container1{
+      
+    
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      background-color: #333;
+    
+    }
+
+    .header {
+      background-color:rgb(255, 241, 249); /* Light Orange */
+      padding: 40px ;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #333; /* Dark Gray */
+      justify-content: center;
+    }
+
+    .header-action {
+      text-align: right;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #333; /* Dark Gray */
+      color: #fff; /* White */
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #ffcc80; /* Light Orange */
+      color: #333; /* Dark Gray */
+    }
+
+    .section {
+      padding: 40px 0;
+    }
+
+    .top-restaurant {
+      background-color: #fff; /* White */
+    }
+
+    .restaurant-card {
+      background-color: #fff; /* White */
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .restaurant-card h2 {
+      margin-bottom: 10px;
+      font-size: 1.8rem; /* Increased font size */
+      color: #333; /* Dark Gray */
+    }
+
+    .restaurant-timing {
+      margin-bottom: 15px;
+      color: #666; /* Gray */
+    }
+
+    .footer {
+      background-color: #333; /* Dark Gray */
+      color: #fff; /* White */
+      padding: 20px 0;
+      
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .footer-link ion-icon {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+
+    .copyright {
+      margin: 0;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    - #PRELOADER
+  -->
+  <div class="loading-container" data-loading-container>
+    <div class="loading-circle"></div>
+  </div>
+<!-- 
+  <figure class="hero-banner" data-reveal>
+
+    <img src="assets\images\boy.png" width="680" height="720" alt="hero banner" class="w-100"> -->
+
+    <!-- <img src="./assets/images/hero-shape-1.svg" width="338" height="138" alt="shape" class="shape shape-1">
+
+    <img src="./assets/images/hero-shape-2.svg" width="237" height="80" alt="shape" class="shape shape-2"> -->
+
+  <!-- </figure> -->
+  <div class="header">
+    <!-- <div class="container"> -->
+      <h1 class="h1">FastEat Restaurants</h1>
+      <div class="header-action">
+        <button class="btn btn-primary">Order Now</button>
+      </div>
+    <!-- </div> -->
+  </div>
+
+  <div class="section top-restaurant">
+    <div class="container grid-list">
+      <!-- Restaurant 1 -->
+      <div class="restaurant-card">
+        <h2 class="h2">Dominos</h2>
+        <p class="restaurant-timing">Open: 11:00 AM - 10:00 PM</p>
+        <button class="btn btn-primary">Order Now</button>
+      </div>
+
+      <!-- Restaurant 2 -->
+      <div class="restaurant-card">
+        <h2 class="h2">Garava Biryani</h2>
+        <p class="restaurant-timing">Open: 10:30 AM - 9:30 PM</p>
+        <button class="btn btn-primary">Order Now</button>
+      </div>
+
+      <!-- Restaurant 3 (India) -->
+      <div class="restaurant-card">
+        <h2 class="h2">Spice Delight</h2>
+        <p class="restaurant-timing">Open: 12:00 PM - 11:00 PM</p>
+        <button class="btn btn-primary">Order Now</button>
+      </div>
+
+      <!-- Restaurant 4 (India) -->
+      <div class="restaurant-card">
+        <h2 class="h2">Mumbai Munch</h2>
+        <p class="restaurant-timing">Open: 11:30 AM - 10:30 PM</p>
+        <button class="btn btn-primary">Order Now</button>
+      </div>
+
+      <!-- Restaurant 5 (India) -->
+      <div class="restaurant-card">
+        <h2 class="h2">Chennai Chaat</h2>
+        <p class="restaurant-timing">Open: 10:00 AM - 9:00 PM</p>
+        <button class="btn btn-primary">Order Now</button>
+      </div>
+      <!-- Add more restaurant cards as needed -->
+    </div>
+  </div>
+
+  <!-- #FOOTER -->
+  <footer class="footer">
+    <div class="container1">
+      
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-footer.svg" width="148" height="38" alt="fasteat home">
+          </a>
+          <h2 class="h2 section-title">The Best Restaurants in Your Home</h2>
+          <p class="section-text">
+            Vitae congue mauris rhoncus aenean. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere.
+            Tempus egestas sed sed risus pretium quam.
+          </p>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title h5">Menu</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <span class="span">Home</span>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <span class="span">About Us</span>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <span class="span">Restaurants</span>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <span class="span">Contacts</span>
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+          </li>
+        </ul
+      
+    </div>
+
